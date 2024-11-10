@@ -1,0 +1,246 @@
+:root {
+  --DesaturatedDarkCyan: hsl(180, 29%, 50%);
+  --LightGrayishCyanBackground: hsl(180, 52%, 96%);
+  --LightGrayishCyanFilterTablets: hsl(180, 31%, 95%);
+  --DarkGrayishCyan: hsl(180, 8%, 52%);
+  --VeryDarkGrayishCyan: hsl(180, 14%, 20%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: "League Spartan", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  background-image: url("./images/bg-header-mobile.svg");
+  padding: 5.1em;
+  background-color: var(--DesaturatedDarkCyan);
+}
+
+.jobListings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+  padding: 4em 2em;
+  background-color: var(--LightGrayishCyanBackground);
+}
+
+.jobListingsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+  width: 100%;
+}
+
+.jobListingsCard {
+  border-left: 5px solid var(--DesaturatedDarkCyan);
+  border-radius: 0.3em;
+  padding: 2em 1.1em 1.2em 1.1em;
+  width: 100%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.jobListingsCard > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.7em;
+}
+
+.jobDesc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8em;
+}
+
+.jobDesc > h3 {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.jobDesc > h3:hover {
+  color: var(--DesaturatedDarkCyan);
+}
+
+.jobType {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.jobType > p {
+  color: var(--DesaturatedDarkCyan);
+  font-weight: 700;
+  vertical-align: middle;
+  margin-right: 1em;
+}
+
+.jobType > div {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.7rem;
+  border-radius: 1em;
+  padding: 0.6em 0.6em 0.5em 0.6em;
+}
+
+.jobType > div:nth-child(2) {
+  background-color: var(--DesaturatedDarkCyan);
+}
+
+.jobType > div:nth-child(3) {
+  background-color: black;
+}
+
+.jobTimeInfo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.jobTimeInfo > li {
+  color: var(--DarkGrayishCyan);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.jobTimeInfo > li:first-child {
+  list-style: none;
+}
+
+.jobListingsCard > hr {
+  margin: 1em 0;
+}
+
+.skills {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.skillTab {
+  background-color: var(--LightGrayishCyanFilterTablets);
+  padding: 0.5em 0.6em;
+  color: var(--DesaturatedDarkCyan);
+  font-weight: 700;
+  font-weight: 1rem;
+  cursor: pointer;
+}
+
+.skillTab:hover {
+  background-color: var(--DesaturatedDarkCyan);
+  color: white;
+}
+
+.companyLogo {
+  width: 17%;
+  margin-top: -4em;
+}
+
+.filterContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  border-radius: 0.3em;
+  margin-top: -5.5em;
+  background-color: white;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.filterTab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--LightGrayishCyanFilterTablets);
+  color: var(--DesaturatedDarkCyan);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.filterTab > p {
+  padding: 0.4em 0.4em;
+}
+
+.removeIcon {
+  background-color: var(--DesaturatedDarkCyan);
+  padding: 0.5em 0.4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.removeIcon:hover {
+  background-color: black;
+}
+
+.invisible {
+  display: none;
+}
+
+.removeIcon > img {
+  max-width: 80%;
+}
+
+.filterContainer > p {
+  color: var(--DarkGrayishCyan);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.filterContainer > p:hover {
+  color: var(--DesaturatedDarkCyan);
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 750px) {
+  .jobListings {
+    padding: 4em 8em;
+  }
+
+  .jobListingsCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em;
+  }
+
+  .jobListingsCard > hr {
+    display: none;
+  }
+
+  .jobListingsCard > div:first-child {
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .companyLogo {
+    margin: 0;
+  }
+}
